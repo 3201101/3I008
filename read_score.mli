@@ -9,4 +9,3 @@ module type READSCORE =
 	  exception NonValidFile
     val lecture : string -> int list
   end
-      

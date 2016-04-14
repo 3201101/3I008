@@ -1,3 +1,23 @@
+module type TREESTRUCTURE =
+  sig
+    type t
+    val init_tree : t
+    val construire_arbre : int list -> t
+    val parcours_arbre : t -> int list
+  end
+
+module type INPUT =
+  sig
+    val open_in : string -> in_channel
+    val input_line : in_channel -> string
+  end
+      
+module type READSCORE =
+  sig
+	  exception NonValidFile
+    val lecture : string -> int list
+  end
+
 module Holy_Tree : TREESTRUCTURE =
   struct
     type t = Noeud of int * int * t list
