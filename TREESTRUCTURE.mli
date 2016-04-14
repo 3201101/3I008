@@ -1,7 +1,7 @@
-module type TREESTRUCTURE = 
+module type TREESTRUCTURE =
   sig
-    type holy_tree
-    val init_tree : holy_tree
-    val contruire_arbre : int list −> holy_tree
-    val parcours_arbre : holy_tree −> int list
+    type t
+    val init_tree : t
+    val construire_arbre : int list -> t
+    val parcours_arbre : t -> int list
   end;;
